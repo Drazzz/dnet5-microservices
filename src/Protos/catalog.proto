@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "Catalog.Grpc";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package catalog;
+
+//service definition
+service CatalogProtoService {
+  rpc GetAllProducts(GetAllProductsRequest) returns (stream ProductModel);
+}
+
+message GetAllProductsRequest {}
+
+message ProductModel {
+  int32 productId = 1;
+  string name = 2;
+  string description = 3;
+  float price = 4;
+  ProductStatus status = 5;
+  google.protobuf.Timestamp createdTime = 6;
+}
+
+enum ProductStatus {
+  INSTOCK = 0;
+  LOW = 1;
+  NONE = 2;
+}

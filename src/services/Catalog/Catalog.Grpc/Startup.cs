@@ -30,7 +30,7 @@ namespace Catalog.Grpc
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<CatalogService>();
                 if (env.IsDevelopment())
                     endpoints.MapGrpcReflectionService();
 
