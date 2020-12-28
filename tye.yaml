@@ -8,4 +8,5 @@ name: microservices-app
 services:
   - name: catalog-grpc
     project: src/services/Catalog/Catalog.Grpc/Catalog.Grpc.csproj
+    # dockerFile: src/services/Catalog/Catalog.Grpc/Dockerfile
     replicas: 2
