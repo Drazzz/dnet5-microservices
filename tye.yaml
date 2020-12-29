@@ -5,6 +5,8 @@
 #    https://aka.ms/AA7q20u
 #
 name: microservices-app
+extensions:
+  - name: zipkin
 services:
   - name: catalog-grpc
     project: src/services/Catalog/Catalog.Grpc/Catalog.Grpc.csproj
