@@ -1,0 +1,1 @@
+tye run -v debug --debug * --logs console
