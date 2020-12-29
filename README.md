@@ -7,3 +7,4 @@ Enchanted and enriched by:
 * Custom DDD framework (where applicatble),
 * gRPC for inter service communication (Ocelot-2-microservices),
 * use TYE for orchestration: https://github.com/dotnet/tye
+* JWT auth based on https://github.com/aspnetrun/run-aspnet-identityserver4
