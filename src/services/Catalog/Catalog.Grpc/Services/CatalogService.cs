@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
-using Catalog.Grpc;
 using System;
 using System.Collections.Generic;
 using Google.Protobuf.WellKnownTypes;
@@ -25,8 +24,8 @@ namespace Catalog.Grpc
         {
             _logger.LogInformation("Fetching list of products with the stream...");
             var products = new List<ProductModel>{
-                new ProductModel{ProductId = 1, Name = "some name"},
-                new ProductModel{ProductId = 2, Name = "dadasd", Status = ProductStatus.Low, CreatedTime = Timestamp.FromDateTime(DateTime.UtcNow)}
+                new() {ProductId = 1, Name = "some name"},
+                new() {ProductId = 2, Name = "dadasd", Status = ProductStatus.Low, CreatedTime = Timestamp.FromDateTime(DateTime.UtcNow)}
             };
 
             foreach (var product in products)
