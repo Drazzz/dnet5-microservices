@@ -13,6 +13,9 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
     <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.34.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="MongoDB.Bson" Version="2.11.5" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.5" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.11.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\ddd-net-bb\src\Persistence\ddd-net-bb.Persistence.MongoDB\ddd-net-bb.Persistence.MongoDB.csproj" />

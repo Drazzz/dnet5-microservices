@@ -2,6 +2,7 @@
 using Catalog.Grpc.Domain.Rules;
 using DDDNETBB.Core;
 using DDDNETBB.Domain;
+using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 
 namespace Catalog.Grpc.Domain
@@ -16,6 +17,7 @@ namespace Catalog.Grpc.Domain
 
 
         [JsonConstructor]
+        [BsonConstructor]
         private ProductAggregate(ProductId id, string name, string description, decimal price, ProductStatus status)
         {
             Check(new ProductNameCannotBeNullEmptyOrWhitespace(name));

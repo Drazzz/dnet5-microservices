@@ -1,4 +1,5 @@
-﻿using DDDNETBB.Persistence.MongoDB;
+﻿using Catalog.Grpc.Infra.Mappings;
+using DDDNETBB.Persistence.MongoDB;
 using DDDNETBB.Persistence.MongoDB.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,8 @@ namespace Catalog.Grpc
         {
             services.AddGrpc();
             services.AddGrpcReflection();
+
+            BsonClassMapInitializer.Initialize(); //mongo mappings init
             services.AddMongoDb(opt =>
             {
                 opt.WithConnectionString(_configuration.GetConnectionString("mongo")); //for dotnet/tye service-discovery

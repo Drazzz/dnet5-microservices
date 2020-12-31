@@ -1,6 +1,7 @@
 ﻿using System;
 using DDDNETBB.Core;
 using DDDNETBB.Domain;
+using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 
 namespace Catalog.Grpc.Domain
@@ -8,6 +9,7 @@ namespace Catalog.Grpc.Domain
     public sealed record ProductId : Identity
     {
         [JsonConstructor]
+        [BsonConstructor]
         private ProductId(Guid value) : base(value)
         { }
 
