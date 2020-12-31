@@ -30,7 +30,7 @@ namespace Catalog.Grpc.Domain
             CreationDate = DateTime.UtcNow;
         }
         public static ProductAggregate For(ProductId id, string name, string description, decimal price, ProductStatus status)
-            => new (id, name, description, price, status);
+            => new (id ?? ProductId.New(), name, description, price, status ?? ProductStatus.None);
 
         public static ProductAggregate For(Guid id, string name, string description, decimal price, int statusId)
         {
