@@ -20,6 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		tye.yaml = tye.yaml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{D29180B6-9114-4A8D-A5B0-D2A952969507}"
+	ProjectSection(SolutionItems) = preProject
+		src\protos\catalog.proto = src\protos\catalog.proto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +69,7 @@ Global
 		{57C1A123-D771-4211-81C8-D676C0CBDA85} = {F0C478AD-5662-4616-B1F1-75C58FDFDD71}
 		{0D96BD11-66FA-4487-A493-60D8A230DE9D} = {D9AB5C78-19C5-489D-BA2B-E37D0C3A0DC9}
 		{8E1528B0-A1F7-4D07-88FA-566081C6072C} = {0D96BD11-66FA-4487-A493-60D8A230DE9D}
+		{D29180B6-9114-4A8D-A5B0-D2A952969507} = {793DF748-8891-48A0-A188-C292F705EFFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D126115-ACD3-428A-BC77-D1C52A9914D3}
